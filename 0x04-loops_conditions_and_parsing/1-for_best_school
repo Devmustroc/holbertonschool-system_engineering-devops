@@ -4,5 +4,5 @@ BEG=1
 END=10
 for ((i=BEG ; i<=END ; i++))
 do
-	echo "Best school"
+	echo "Best School"
 done
