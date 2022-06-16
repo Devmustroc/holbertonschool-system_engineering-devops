@@ -2,7 +2,7 @@
 # This script is displaying "Best School" 10 times
 beg=1
 end=10
-for ((i = 0 ; i < 10 ; i++))
+for ((i=beg ; i<=end; i++))
 do
 	echo "best school"
 done
