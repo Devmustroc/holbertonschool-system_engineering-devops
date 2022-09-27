@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Install haproxy and 4250-web-02 & 4250-lb-01
+sudo apt-get update -y
+sudo apt install haproxy -y
+echo "ENABLED=1" >> /etc/default/haproxy
+CONF="\
+frontend www
+	 bind *:80
+	 mode tcp
+	 option  tcplog
+	 default_backend nginx_pool
+backend nginx_pool
+	balance roundrobin
+	mode tcp
+	server 4250-web-01 34.229.152.152:80 check
+	server 4250-web-02 3.82.23.14:80 check
+"
+echo "$CONF" >> /etc/haproxy/haproxy.cfg
+service haproxy start

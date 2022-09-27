@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Using bash script to connect in a Remote Terminal Sessions.
+# Server is ~/.ssh/school with the user ubuntu.
+
+ssh -i ~/.ssh/school ubuntu@54.173.120.105

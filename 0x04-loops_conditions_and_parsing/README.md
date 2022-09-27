@@ -1,0 +1,1 @@
+Devops Parsing loops condition
